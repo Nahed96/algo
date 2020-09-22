@@ -1,0 +1,33 @@
+ALGORITHM checkpoint
+VAR
+i,word,vowle,length,caract :INTEGER
+ch:STRING
+dict:
+BEGIN
+i:=0
+j:=0
+word:=0
+
+vowle:=0
+write("donner une phrase")
+read(ch)
+WHILE (ch[i]<>'.') DO
+    IF (ch[i]=' ') THEN
+        word++
+    ELSE_IF(ch[i]='a'or 'e' or 'i'or 'u'or 'o') THEN
+        vowle++
+    ELSE caract++
+    END_IF
+    i++
+
+
+END_WHILE
+length:=caract+vowle
+write("The length of the sentence is")
+write(length)
+write("The number of words in the sentence  is ")
+write(word)
+write("The number of vowels in the sentence is")
+write(vowle)
+    
+END
